@@ -1,5 +1,11 @@
+import { useRouter } from 'next/router'
 function SomethingImportantPage() {
-    return <h1>The details Page</h1>
+
+    const router = useRouter()
+    const newsId = router.query.newsId
+
+    // /send req to backend to fetch news item baed on id
+    return <h1>The {newsId} Page</h1>
 }
 
 export default SomethingImportantPage
